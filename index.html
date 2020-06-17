@@ -11,14 +11,16 @@
 <body>
     <div class="content">
         <header>
+            <h1>Gif Search</h1>
             <div class="search-container">
-                <h1>Gif Search</h1>
                 <input id="search-box" type="text" placeholder="Search.." name="search" onkeyup="return checkEnter(event)">
                 <button id="search-btn" type="submit" onclick="searchFromBtn()"><i class="fas fa-search"></i></button>
             </div>
         </header>
 
-        <div id="giphyme"></div>
+        <div id="giphyme-container">
+            <div id="giphyme"></div>
+        </div>
     </div>    
     
 </body>
