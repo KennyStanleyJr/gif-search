@@ -2,7 +2,6 @@
 
 :root {
     --window-height: calc(var(--vh, 1vh) * 100);
-    --content-height: var(--ch); /* , calc(100vh - 5vh - 83px)); */
 }
 
 * {
@@ -15,41 +14,43 @@ html, body {
     background-color: black;
     color: white;
     font-family: 'Montserrat', sans-serif;
-
     width: 100%;
     height: var(--window-height, 100vh);
-
     overflow: hidden;
+}
+
+body {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
 }
 
 .content {
-    height: 100%;
-    padding: 5vh 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 80vw;
+    max-height: var(--window-height);
 }
 
 header {
-    width: 100%;
-    text-align: center;
-    /* margin-top: 5vh; */
+    padding: 5vmin;
 }
 
 .search-container {
-    overflow: hidden;
-    display: block;
-    width: 80%;
-    min-width: 250px;
-    text-align: center;
-    margin: 0 auto;
+    display: flex;
+    justify-content: center;
 }
 
-.search-container input[type=text] {
-    width: 80%;
-    padding: 6px;
-    border: 2px solid white;
-    border-radius: 20px;
-    margin-top: 8px;
-    /* margin-right: 16px; */
-    font-size: 17px;
+#search-box {
+    height: 2rem;
+    width: 60vw;
+    border-radius: 15px;
+    border: none;
+    padding-left: 1rem;
 }
 
 .search-container *:focus {
@@ -60,49 +61,19 @@ header {
     background-color: black;
     color: white;
     padding: 6px 10px;
-    margin-top: 8px;
-    margin-right: 16px;
-    font-size: 17px;
     border: none;
     cursor: pointer;
 }
   
 #giphyme {
-    overflow: hidden;
-    position: relative;
-    height: var(--content-height);
-    width: 100%;
+    width: 80vw;
+    height: 50vh;
     padding: 5vmin;
+    padding-top: 0;
 }
 
 #giphyme img {
-    display: block;
     height: 100%;
-    margin: 0 auto;
-
+    width: 100%;
     object-fit: contain;
-
-    border-radius: 20px;
 }
-/* 
-@media (max-width: 1000px) {
-    .content {
-        position: absolute;
-        top: 50%;
-        -ms-transform: translateY(-50%);
-        transform: translateY(-50%);
-        height: unset;
-        width: 100%;
-        text-align: center;
-    }
-    header h1 {
-        font-size: 5vmin;
-    }
-    .search-container {
-        width: unset;
-        padding: 0 1rem;
-    }
-    #giphyme {
-        height: unset;    
-    }
-} */
