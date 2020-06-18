@@ -38,6 +38,11 @@ body {
 
 header {
     padding: 5vmin;
+    font-size: 1.5em;
+}
+
+header h1 {
+    padding-bottom: 1rem;
 }
 
 .search-container {
@@ -46,23 +51,28 @@ header {
 }
 
 #search-box {
-    height: 2rem;
+    height: 3rem;
     width: 60vw;
-    border-radius: 15px;
+    border-radius: 30px;
     border: none;
     padding-left: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.3rem;
 }
 
 .search-container *:focus {
     outline: none;
 }
 
-.search-container button {
+#search-btn {
     background-color: black;
     color: white;
     padding: 6px 10px;
     border: none;
     cursor: pointer;
+}
+#search-btn i {
+    font-size: 2rem;
 }
   
 #giphyme {
