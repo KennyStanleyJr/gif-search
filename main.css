@@ -51,6 +51,8 @@ header h1 {
 }
 
 #search-box {
+    background-color: rgb(57, 61, 63);
+    color: white;
     height: 3rem;
     width: 60vw;
     border-radius: 30px;
