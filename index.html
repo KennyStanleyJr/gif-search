@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>HTTP Request Test</title>
     <script src="request.js"></script>
     <script src="https://kit.fontawesome.com/9f75dcf82e.js" crossorigin="anonymous"></script>
@@ -10,7 +10,7 @@
 </head>
 <body>
     <div class="content">
-        <header>
+        <header id="header">
             <h1>Gif Search</h1>
             <div class="search-container">
                 <input id="search-box" type="text" placeholder="Search.." name="search" onkeyup="return checkEnter(event)">
@@ -18,9 +18,8 @@
             </div>
         </header>
 
-        <div id="giphyme-container">
-            <div id="giphyme"></div>
-        </div>
+        <div id="giphyme"></div>
+        
     </div>    
     
 </body>
