@@ -2,16 +2,17 @@ let q = '';
 let button = false;
 let errorCounter = 0;
 
+// ======== Sets window height to the true inner size.
 // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
 let vh = window.innerHeight * 0.01;
 // Then we set the value in the --vh custom property to the root of the document
 document.documentElement.style.setProperty('--vh', `${vh}px`);
 
 window.addEventListener('resize', () => {
-    // We execute the same script as before
     let vh = window.innerHeight * 0.01;
     document.documentElement.style.setProperty('--vh', `${vh}px`);
 });
+// -------------------------------------------------------------
 
 function displayGif(inputText) {
     if (inputText) {
@@ -35,6 +36,7 @@ function displayGif(inputText) {
 			data = JSON.parse(request.responseText).data.image_url;
             console.log(request);
             document.getElementById("giphyme").innerHTML = '<img src = "'+data+'"  title="GIF via Giphy">';
+            document.documentElement.style.setProperty('--gif-data', `${data}`);
 		} else {
             console.log('reached giphy, but API returned an error');
 		}
@@ -59,7 +61,7 @@ window.addEventListener('error', function(e){
         console.log(e);
         displayGif();
     } else {
-        alert("Invalid search term. Please try again.");
+        alert("Whoops! Something broke. Please try again.");
         errorCounter = 0;
         location.reload();
     }
