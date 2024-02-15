@@ -8,20 +8,20 @@
     <script src="https://kit.fontawesome.com/9f75dcf82e.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="main.css">
     <script data-ad-client="ca-pub-2387423237635482" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script type="module" src="request.js" defer></script>
 </head>
 <body>
     <div class="content">
         <header id="header">
             <h1>Gif Search</h1>
             <div class="search-container">
-                <input id="search-box" type="text" placeholder="Search.." name="search" onkeyup="return checkEnter(event)">
-                <button id="search-btn" type="submit" onclick="searchFromBtn()"><i class="fas fa-search"></i></button>
+                <input id="search-box" type="text" placeholder="Search.." name="search" onkeyup="return window?.checkEnter(event)">
+                <button id="search-btn" type="submit" onclick="window?.searchFromBtn()"><i class="fas fa-search"></i></button>
             </div>
         </header>
 
         <div id="giphyme"></div>
         
     </div>    
-    <script src="request.js"></script>
 </body>
 </html>
