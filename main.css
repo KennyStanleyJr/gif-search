@@ -30,6 +30,7 @@ body {
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: center;
+    align-items: center;
     text-align: center;
     margin: 0 auto;
     max-width: 80vw;
@@ -88,4 +89,19 @@ header h1 {
     height: 100%;
     width: 100%;
     object-fit: contain;
+}
+
+#share {
+    padding: 2vmin;
+    font-size: 1.4rem;
+    width: 4rem;
+    height: 4rem;
+    background-color: rgb(57, 61, 63);
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

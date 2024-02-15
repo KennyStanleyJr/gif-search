@@ -88,3 +88,10 @@ window.searchFromBtn = function searchFromBtn() {
   const text = document.getElementById('search-box')?.value ?? ''
   displayGif(text)
 }
+
+window.shareGif = function shareGif() {
+  const url = document.getElementById('giphyme').firstChild.src
+  navigator.share({
+    url: url,
+  })
+}
