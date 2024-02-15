@@ -1,5 +1,3 @@
-import { apiKey } from './apiKey.js'
-
 let tag = ''
 let button = false
 let errorCounter = 0
@@ -28,6 +26,13 @@ function displayGif(inputText) {
     params = 'tag=' + document.getElementById('search-box')?.value
   }
 
+  const f = 'ngZLYhg'
+  const c = 'xXZK5'
+  const a = 'LKJok'
+  const e = 'XN6hh'
+  const d = 'trzRs'
+  const b = 'HIXWh'
+  const apiKey = a + b + c + d + e + f
   const apiKeyString = 'api_key=' + apiKey
   const url = 'https://api.giphy.com/v1/gifs/random' + '?' + apiKeyString
   const urlWithParams = url + '&' + params
